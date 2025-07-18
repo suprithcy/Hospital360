@@ -1,0 +1,11 @@
+Doctor_ID,Name,Password,Specialization
+D01,Dr. Ayesha Mehta,D01_Dr. Ayesha Mehta,General
+D02,Dr. Rohan Kapoor,D02_Dr. Rohan Kapoor,Genaral
+D03,Dr. Sneha Reddy,D03_Dr. Sneha Reddy,Cardiology
+D04,Dr. Vikram Desai,D04_Dr. Vikram Desai,Cardiology
+D05,Dr. Anjali Verma,D05_Dr. Anjali Verma,Orthopedics
+D06,Dr. Arjun Sharma,D06_Dr. Arjun Sharma,Orthopedics
+D07,Dr. Neha Joshi,D07_Dr. Neha Joshi,Dermatology
+D08,Dr. Karan Malhotra,D08_Dr. Karan Malhotra,Dermatology
+D09,Dr. Priya Nair,D09_Dr. Priya Nair,Pediatrics
+D10,Dr. Rajeev Menon,D10_Dr. Rajeev Menon,Pediatrics
