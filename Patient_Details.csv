@@ -1,6 +1,6 @@
 Patient_ID,Name,Gender,Address,Symptoms,Doctor_type,Doctor_name,Test_results
-P001,Bhaskar,Male,Tumkur,"Fever,Headache,Fatigue",None,None,None
+P001,Bhaskar,Male,Tumkur,"Fever,Headache,Fatigue",General Physician,Dr. Ayesha Mehta,"Blood Pressure:35, WBC Count:76, Hemoglobin:98"
 P002,Jhon,Male,Tumkur,"Chest Pain,Shortness of Breath,Palpitations",None,None,None
 P003,Jhonny,Male,Tumkur,"Joint Pain,Back Pain,Swelling in Limbs",None,None,None
 P004,James,Male,Tumkur,"Skin Rash,Acne,Itching",None,None,None
-P005,jack,Male,Tumkur,"Cough,Vomiting",None,None,None
+P005,jack,Male,Tumkur,"Cough,Vomiting",Pediatrician,Dr. Priya Nair,None
