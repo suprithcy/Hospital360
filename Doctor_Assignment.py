@@ -22,6 +22,7 @@ def doctor_assignment(p_id):
         doctors_details = list(csv.reader(file))
 
     # Doctor assignment configuration
+    #This id a Dictionary of dictionary of list and list of tuples
     doctor_config = {
         "General Physician": {
             "symptoms": ["fever", "headache", "fatigue"],
@@ -92,4 +93,5 @@ def doctor_assignment(p_id):
     #     print(row)
 
 # Test the function
-doctor_assignment("P001")
+patient_id = input("Enter the Patient ID : )
+doctor_assignment(patient_id)
