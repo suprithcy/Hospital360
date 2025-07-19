@@ -1,11 +1,11 @@
-Receptionist_ID,Name,Gender,Password
-REC2001,Sunita Rao,Female,REC2001_SunitaRao
-REC2002,Amit Verma,Male,REC2002_AmitVerma
-REC2003,Pooja Singh,Female,REC2003_PoojaSingh
-REC2004,Rakesh Jain,Male,REC2004_RakeshJain
-REC2005,Nidhi Shah,Female,REC2005_NidhiShah
-REC2006,Deepa Iyer,Female,REC2006_DeepaIyer
-REC2007,Raj Malhotra,Male,REC2007_RajMalhotra
-REC2008,Sneha Kulkarni,Female,REC2008_SnehaKulkarni
-REC2009,Anil Kapoor,Male,REC2009_AnilKapoor
-REC2010,Swati Deshmukh,Female,REC2010_SwatiDeshmukh
+Receptionist_ID,Name,Password,Gender
+REC2001,Sunita Rao,REC2001_SunitaRao,Female
+REC2002,Amit Verma,REC2002_AmitVerma,Male
+REC2003,Pooja Singh,REC2003_PoojaSingh,Female
+REC2004,Rakesh Jain,REC2004_RakeshJain,Male
+REC2005,Nidhi Shah,REC2005_NidhiShah,Female
+REC2006,Deepa Iyer,REC2006_DeepaIyer,Female
+REC2007,Raj Malhotra,REC2007_RajMalhotra,Male
+REC2008,Sneha Kulkarni,REC2008_SnehaKulkarni,Female
+REC2009,Anil Kapoor,REC2009_AnilKapoor,Male
+REC2010,Swati Deshmukh,REC2010_SwatiDeshmukh,Female
