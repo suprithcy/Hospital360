@@ -1,2 +1,2 @@
 Patient_ID,Name,Gender,Address,Symptoms,Doctor_type,Doctor_name
-P001,Bhaskar,Male,Tumkur,"fever"
+P001,Bhaskar,Male,Tumkur,"fever",None,None
