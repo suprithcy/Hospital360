@@ -2,7 +2,7 @@ import csv
 import os
 
 RECEPTIONIST_FILE = "Receptionist_details.csv"
-PATIENTS_FILE = "Patient_Detailes.csv"
+PATIENTS_FILE = "Patient_details.csv"
 
 # ------------------ LOGIN FUNCTION ------------------
 def login():
@@ -39,7 +39,6 @@ def add_new_patient():
 
     name = get_input("Enter Patient Name: ", lambda x: all(c.isalpha() or c.isspace() for c in x) and x.strip() != "", "❌ Enter a valid name (alphabets and spaces only).")
     gender = get_input("Enter Gender (Male/Female/Other): ", lambda x: x.lower() in ['male', 'female', 'other'], "❌ Enter 'Male', 'Female', or 'Other'.")
-    address = input("Enter Address: ").strip() or "None"
     address = input("Enter Address: ").strip() or "None"
     symptoms = input("Enter Symptoms (comma separated): ").strip() or "None"
 
