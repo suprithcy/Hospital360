@@ -1,0 +1,2 @@
+Patient_ID,Name,Gender,Address,Symptoms,Doctor_Treatement_status (Done or Notdone),Condition (Admit or not),Heart_Rate,Blood_Count,Discharge _Status(Yes/No)
+P001,Bhaskar,Male,Tumkur,"fever,cough, coldness",notdone,Admit,60,23,No
