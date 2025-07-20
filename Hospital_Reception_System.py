@@ -26,7 +26,8 @@ def display_menu():
     print("1. Add New Patient")
     print("2. Search Patient")
     print("3. Delete Patient")
-    print("4. Exit")
+    print("4. Assign Doctor to Patient")
+    print("5. Exit")
 
 # ------------------ ADD PATIENT ------------------
 def add_new_patient():
@@ -61,6 +62,7 @@ def add_new_patient():
                 return f"P{next_id_num:03d}"
             else:
                 return "P001"
+
     patient_id = get_next_patient_id()
     patient_data = [
         patient_id, name, gender, address, symptoms, Doctor_type, Doctor_name, Test_results
@@ -79,7 +81,6 @@ def add_new_patient():
         writer = csv.writer(file)
         writer.writerow(patient_data)
     print(f"\n✅ Patient '{name}' added successfully with ID {patient_id}.\n")
-
 
 # ------------------ DELETE PATIENT FUNCTION ------------------
 def delete_patient_by_id():
@@ -107,14 +108,13 @@ def delete_patient_by_id():
     except FileNotFoundError:
         print("❌ Patient file not found.\n")
 
-
 # ------------------ MAIN FUNCTION ------------------
 def main():
     if not login():
         return
     while True:
         display_menu()
-        choice = input("Enter your choice (1-4): ").strip()
+        choice = input("Enter your choice (1-5): ").strip()
         if choice == '1':
             add_new_patient()
         elif choice == '2':
@@ -168,6 +168,12 @@ def main():
         elif choice == '3':
             delete_patient_by_id()
         elif choice == '4':
+            # Run Doctor_Assignment.py
+            try:
+                os.system('python Doctor_Assignment.py')
+            except Exception as e:
+                print(f"❌ Failed to run Doctor_Assignment.py: {e}")
+        elif choice == '5':
             print("👋 Exiting... Goodbye!")
             break
         else:

@@ -1,3 +1,4 @@
-Patient_ID,Name,Gender,Address,Symptoms,Doctor_type,Doctor_name,Test_results
-P001,Sharath,Male,Tumkur,"Fever, cough",General Physician,Dr. Ayesha Mehta,"Blood Pressure:54, WBC Count:36, Hemoglobin:47"
-P002,kencha,Male,malvalli,Fever,General Physician,Dr. Rohan Kapoor,"Blood Pressure:54, WBC Count:56, Hemoglobin:87"
+Patient_ID,Name,Gender,Address,Symptoms,Doctor_type,Doctor_name,Test_results,
+P002,Manja,Male,Delhi,chest pain,Cardiologist,Dr. Sneha Reddy,"ECG Result:good, Ejection Fraction:7, Lipid Profile:98","['', '']"
+P003,Kartik,Male,Dvg,acne,Dermatologist,Dr. Neha Joshi,"Skin Biopsy:34, Dermoscopy:43, Allergy Patch Test:43",
+P004,Karmanath,Male,mangalore,fever,General Physician,Dr. Rohan Kapoor,"Blood Pressure:65, WBC Count:89, Hemoglobin:78",
