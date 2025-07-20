@@ -13,11 +13,11 @@ def login():
             reader = csv.DictReader(file)
             for row in reader:
                 if row['Receptionist_ID'] == receptionist_id and row['Password'] == password:
-                    print(f"\n✅ Welcome {receptionist_id}!\n")
+                    print(f"\nWelcome {receptionist_id}!\n")
                     return True
     except FileNotFoundError:
-        print("❌ Receptionist file not found.")
-    print("\n❌ Invalid ID or Password.\n")
+        print(" Receptionist file not found.")
+    print("\n Invalid ID or Password.\n")
     return False
 
 # ------------------ MENU FUNCTION ------------------
@@ -38,8 +38,8 @@ def add_new_patient():
                 return value
             print(error_msg)
 
-    name = get_input("Enter Patient Name: ", lambda x: all(c.isalpha() or c.isspace() for c in x) and x.strip() != "", "❌ Enter a valid name (alphabets and spaces only).")
-    gender = get_input("Enter Gender (Male/Female/Other): ", lambda x: x.lower() in ['male', 'female', 'other'], "❌ Enter 'Male', 'Female', or 'Other'.")
+    name = get_input("Enter Patient Name: ", lambda x: all(c.isalpha() or c.isspace() for c in x) and x.strip() != "", " Enter a valid name (alphabets and spaces only).")
+    gender = get_input("Enter Gender (Male/Female/Other): ", lambda x: x.lower() in ['male', 'female', 'other'], " Enter 'Male', 'Female', or 'Other'.")
     address = input("Enter Address: ").strip() or "None"
     symptoms = input("Enter Symptoms (comma separated): ").strip() or "None"
 
@@ -80,7 +80,7 @@ def add_new_patient():
     with open(PATIENTS_FILE, 'a', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(patient_data)
-    print(f"\n✅ Patient '{name}' added successfully with ID {patient_id}.\n")
+    print(f"\nPatient '{name}' added successfully with ID {patient_id}.\n")
 
 # ------------------ DELETE PATIENT FUNCTION ------------------
 def delete_patient_by_id():
@@ -102,11 +102,11 @@ def delete_patient_by_id():
                 writer = csv.DictWriter(file, fieldnames=header)
                 writer.writeheader()
                 writer.writerows(new_rows)
-            print(f"\n✅ Patient with ID '{patient_id}' deleted successfully.\n")
+            print(f"\nPatient with ID '{patient_id}' deleted successfully.\n")
         else:
-            print("❌ No matching patient found.\n")
+            print(" No matching patient found.\n")
     except FileNotFoundError:
-        print("❌ Patient file not found.\n")
+        print(" Patient file not found.\n")
 
 # ------------------ MAIN FUNCTION ------------------
 def main():
@@ -128,7 +128,7 @@ def main():
                         reader = csv.DictReader(file)
                         rows = list(reader)
                         if not rows:
-                            print("❌ No patient records found.\n")
+                            print(" No patient records found.\n")
                         else:
                             print("\n--- All Patient Details ---")
                             headers = reader.fieldnames
@@ -144,7 +144,7 @@ def main():
                                 ))
                             print("-" * 80 + "\n")
                 except FileNotFoundError:
-                    print("❌ Patient file not found.\n")
+                    print(" Patient file not found.\n")
             elif sub_choice == '2':
                 search_id = input("Enter Patient ID to search: ").strip()
                 try:
@@ -159,12 +159,12 @@ def main():
                                 found = True
                                 break
                         if not found:
-                            print("❌ No matching patient found.")
+                            print(" No matching patient found.")
                         print()
                 except FileNotFoundError:
-                    print("❌ Patient file not found.\n")
+                    print(" Patient file not found.\n")
             else:
-                print("❌ Invalid choice. Please try again.\n")
+                print(" Invalid choice. Please try again.\n")
         elif choice == '3':
             delete_patient_by_id()
         elif choice == '4':
@@ -172,12 +172,12 @@ def main():
             try:
                 os.system('python Doctor_Assignment.py')
             except Exception as e:
-                print(f"❌ Failed to run Doctor_Assignment.py: {e}")
+                print(f" Failed to run Doctor_Assignment.py: {e}")
         elif choice == '5':
             print("👋 Exiting... Goodbye!")
             break
         else:
-            print("❌ Invalid choice. Please try again.\n")
+            print(" Invalid choice. Please try again.\n")
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,60 @@
+
+--- Update on 2025-07-20 22:46:54 ---
+Patient_ID: P001
+Name: manoj
+Gender: Male
+Address: bangalore
+Symptoms: fever
+Doctor_type: General Physician
+Doctor_name: Dr. Ayesha Mehta
+Test_results: nan
+Doctor's Notes: nothing
+--------------------------------------------------
+
+--- Daily Update on 2025-07-20 22:59:55 ---
+Patient_ID: P001
+Name: manoj
+Gender: Male
+Address: bangalore
+Symptoms: fever
+Doctor_type: General Physician
+Doctor_name: Dr. Ayesha Mehta
+Test_results: nan
+Checkup Notes: kcblewgjweb
+----------------------------------------
+
+--- Daily Update on 2025-07-20 23:08:13 ---
+Patient_ID: P001
+Name: manoj
+Gender: Male
+Address: bangalore
+Symptoms: fever
+Doctor_type: General Physician
+Doctor_name: Dr. Ayesha Mehta
+Test_results: nan
+Checkup Notes: take paracitomal
+----------------------------------------
+
+--- Daily Update on 2025-07-20 23:08:40 ---
+Patient_ID: P001
+Name: manoj
+Gender: Male
+Address: bangalore
+Symptoms: fever
+Doctor_type: General Physician
+Doctor_name: Dr. Ayesha Mehta
+Test_results: Blood Pressure:76, WBC Count:87, Hemoglobin:54
+Checkup Notes: 
+----------------------------------------
+
+--- Daily Update on 2025-07-20 23:28:55 ---
+Patient_ID: P001
+Name: manoj
+Gender: Male
+Address: bangalore
+Symptoms: fever
+Doctor_type: General Physician
+Doctor_name: Dr. Ayesha Mehta
+Test_results: Blood Pressure:76, WBC Count:87, Hemoglobin:54
+Checkup Notes: Drink more water
+----------------------------------------

@@ -1,4 +1,2 @@
-Patient_ID,Name,Gender,Address,Symptoms,Doctor_type,Doctor_name,Test_results,
-P002,Manja,Male,Delhi,chest pain,Cardiologist,Dr. Sneha Reddy,"ECG Result:good, Ejection Fraction:7, Lipid Profile:98","['', '']"
-P003,Kartik,Male,Dvg,acne,Dermatologist,Dr. Neha Joshi,"Skin Biopsy:34, Dermoscopy:43, Allergy Patch Test:43",
-P004,Karmanath,Male,mangalore,fever,General Physician,Dr. Rohan Kapoor,"Blood Pressure:65, WBC Count:89, Hemoglobin:78",
+Patient_ID,Name,Gender,Address,Symptoms,Doctor_type,Doctor_name,Test_results
+P001,manoj,Male,bangalore,fever,General Physician,Dr. Ayesha Mehta,"Blood Pressure:76, WBC Count:87, Hemoglobin:54"

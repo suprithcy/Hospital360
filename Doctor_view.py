@@ -1,4 +1,5 @@
 import csv
+import os  # For running external Python files
 
 # ------------------ Utility Functions ------------------
 
@@ -35,7 +36,7 @@ def save_patients(patients):
 
 # View Assigned Patients
 def view_assigned_patients(doctor_name, patients):
-    print(f"\n📋 Assigned Patients for {doctor_name}:")
+    print(f"\nAssigned Patients for {doctor_name}:")
     found = False
     print("-" * 100)
     print(f"{'Patient_ID':<12} {'Name':<15} {'Gender':<8} {'Address':<15} {'Symptoms':<20} {'Test_results'}")
@@ -45,7 +46,7 @@ def view_assigned_patients(doctor_name, patients):
             print(f"{row['Patient_ID']:<12} {row['Name']:<15} {row['Gender']:<8} {row['Address']:<15} {row['Symptoms']:<20} {row['Test_results']}")
             found = True
     if not found:
-        print("❌ No patients assigned.")
+        print(" No patients assigned.")
 
 # View Patient Details
 def view_patient_details(patients):
@@ -56,7 +57,7 @@ def view_patient_details(patients):
             for key, value in p.items():
                 print(f"{key}: {value}")
             return
-    print("❌ Patient not found.")
+    print("Patient not found.")
 
 # Update Test Results
 def update_test_results(patients):
@@ -84,24 +85,32 @@ def update_test_results(patients):
 
                 test_results_str = ", ".join([f"{k}:{v}" for k, v in test_results.items()])
                 p["Test_results"] = test_results_str
-                print("✅ Test results updated.")
+                print(" Test results updated.")
             else:
-                print("❌ Unknown Doctor Type.")
+                print(" Unknown Doctor Type.")
             return
-    print("❌ Patient not found.")
+    print(" Patient not found.")
+
+# Run Daily Checkup Script
+def run_daily_checkup():
+    print("\n🩺 Opening Daily Checkup Module...")
+    try:
+        os.system("python Doctor_checkup.py")  # Ensure this file exists in the same directory
+    except Exception as e:
+        print(f" Failed to run Doctor_checkup.py: {e}")
 
 # ------------------ Main Program ------------------
 
 def doctor_main():
-    print("===== 🏥 Doctor Login Portal =====")
+    print("===== Doctor Login Portal =====")
     credentials, doctor_names = load_doctor_credentials()
 
     doctor_id = input("Enter Doctor ID: ")
     password = input("Enter Password: ")
 
     if doctor_id in credentials and credentials[doctor_id] == password:
-        print("✅ Login successful!")
-        doctor_name = doctor_names[doctor_id]  # ✅ Correctly fetch doctor name
+        print(" Login successful!")
+        doctor_name = doctor_names[doctor_id]
 
         patients = load_patients()
 
@@ -110,9 +119,10 @@ def doctor_main():
             print("1. View Assigned Patients")
             print("2. View Patient Details")
             print("3. Update Patient Test Results")
-            print("4. Exit")
+            print("4. Daily Doctor Visit")
+            print("5. Exit")
 
-            choice = input("Enter your choice (1-4): ")
+            choice = input("Enter your choice (1-5): ")
 
             if choice == '1':
                 view_assigned_patients(doctor_name, patients)
@@ -122,12 +132,14 @@ def doctor_main():
                 update_test_results(patients)
                 save_patients(patients)
             elif choice == '4':
-                print("👋 Logging out. Goodbye!")
+                run_daily_checkup()
+            elif choice == '5':
+                print("Logging out. Goodbye!")
                 break
             else:
-                print("❌ Invalid choice. Please try again.")
+                print(" Invalid choice. Please try again.")
     else:
-        print("❌ Invalid Doctor ID or Password.")
+        print(" Invalid Doctor ID or Password.")
 
 # ------------------ Run the Program ------------------
 if __name__ == "__main__":
