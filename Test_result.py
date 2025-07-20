@@ -10,12 +10,13 @@ test_map = {
     "Pediatrician": ["Growth Check", "Vaccination Status", "Throat Exam"]
 }
 
-# Load existing patient data
+# Load existing patient data into a list patients[], each record as a dictionary
 patients = []
 with open('Patient_details.csv', newline='') as file:
     reader = csv.DictReader(file)
     for row in reader:
         patients.append(row)
+# print(patients)       
 
 # Ask for Patient ID
 p_id = input("Enter Patient ID: ")
@@ -33,9 +34,15 @@ for p in patients:
                 result = input(f"Enter result for {test}: ")
                 test_results[test] = result
             
-            # Store results as a key:value string
+            # Store Test results as a key:value string
             test_results_str = ", ".join([f"{k}:{v}" for k, v in test_results.items()])
             p["Test_results"] = test_results_str
+            # Store Doctor's observations as a string
+            observation = input("Enter Doctor's Summary/Observation: ")
+            p["Doctor_Observation"] = observation
+            # Store the admission status as Boolean
+            admission_input = input("Enter 'Yes' if Admission required, otherwise press Enter: ").lower()
+            p["Admission_Status"] = True if admission_input == "yes" else False
         else:
             print("Unknown Doctor Type")
         break
