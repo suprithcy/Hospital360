@@ -13,6 +13,12 @@ def doctor_assignment(p_id):
     else:
         print("Patient ID not found.")
         return
+    
+    flag = input("Do you want to see any specific Doctor (yes or no) : ").lower()
+    if flag == "no":
+        d_name = "nope"
+    else:
+        d_name = input("Provide the Doctor Name to visit : ")
 
     # Get and clean symptoms
     symptoms = [s.strip().lower() for s in patient_details[patient_index][4].split(',')]
@@ -45,36 +51,52 @@ def doctor_assignment(p_id):
             "doctors": [(9, "Dr. Priya Nair"), (10, "Dr. Rajeev Menon")]
         }
     }
+    if d_name == "nope":
+        assigned = False
 
-    assigned = False
+        for specialization, data in doctor_config.items():
+            if any(symptom in symptoms for symptom in data["symptoms"]):
+                patient_details[patient_index][5] = specialization
 
-    for specialization, data in doctor_config.items():
-        if any(symptom in symptoms for symptom in data["symptoms"]):
-            patient_details[patient_index][5] = specialization
+                if patient_details[patient_index][6].lower() == "none":
+                    # Get load of each doctor
+                    doc1_idx, doc1_name = data["doctors"][0]
+                    doc2_idx, doc2_name = data["doctors"][1]
 
-            if patient_details[patient_index][6].lower() == "none":
-                # Get load of each doctor
-                doc1_idx, doc1_name = data["doctors"][0]
-                doc2_idx, doc2_name = data["doctors"][1]
+                    load1 = int(doctors_details[doc1_idx][4])
+                    load2 = int(doctors_details[doc2_idx][4])
 
-                load1 = int(doctors_details[doc1_idx][4])
-                load2 = int(doctors_details[doc2_idx][4])
+                    if load1 <= load2:
+                        selected_doc = doc1_name
+                        doctors_details[doc1_idx][4] = str(load1 + 1)
+                    else:
+                        selected_doc = doc2_name
+                        doctors_details[doc2_idx][4] = str(load2 + 1)
 
-                if load1 <= load2:
-                    selected_doc = doc1_name
-                    doctors_details[doc1_idx][4] = str(load1 + 1)
+                    patient_details[patient_index][6] = selected_doc
+                    assigned = True
                 else:
-                    selected_doc = doc2_name
-                    doctors_details[doc2_idx][4] = str(load2 + 1)
+                    print("Doctor already assigned.")
+                break
 
-                patient_details[patient_index][6] = selected_doc
-                assigned = True
-            else:
-                print("Doctor already assigned.")
-            break
+        if not assigned:
+            print("No matching symptoms found or doctor already assigned.")
 
-    if not assigned:
-        print("No matching symptoms found or doctor already assigned.")
+    else:
+        for specialization, data in doctor_config.items():
+            if d_name in data["doctors"][0]:
+                doc_idx, doc_name = data["doctors"][0]
+                patient_details[patient_index][5] = specialization
+                patient_details[patient_index][6] = doc_name
+                break
+            elif d_name in data["doctors"][1]:
+                doc_idx, doc_name = data["doctors"][1]
+                patient_details[patient_index][5] = specialization
+                patient_details[patient_index][6] = doc_name
+                break
+
+        load = int(doctors_details[doc_idx][4])
+        doctors_details[doc_idx][4] = str(load + 1)
 
     # Write updated patient details
     with open('Patient_Details.csv', 'w', newline='') as file:
@@ -94,4 +116,7 @@ def doctor_assignment(p_id):
 
 # Test the function
 patient_id = input("Enter the Patient ID : ")
+
+
+
 doctor_assignment(patient_id)
