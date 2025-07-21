@@ -1,7 +1,5 @@
-import csv
+import csv  #for Handling the csv files
 import os  # For running external Python files
-
-# ------------------ Utility Functions ------------------
 
 # Load doctor credentials and names from Doctor_Details.csv
 def load_doctor_credentials():
@@ -134,13 +132,12 @@ def doctor_main():
             elif choice == '4':
                 run_daily_checkup()
             elif choice == '5':
-                print("Logging out. Goodbye!")
+                print("Logging out. Goodbye")
                 break
             else:
                 print(" Invalid choice. Please try again.")
     else:
         print(" Invalid Doctor ID or Password.")
 
-# ------------------ Run the Program ------------------
 if __name__ == "__main__":
     doctor_main()

@@ -12,7 +12,7 @@ test_map = {
 
 # Load existing patient data into a list patients[], each record as a dictionary
 patients = []
-with open('Patient_details.csv', newline='') as file:
+with open('Patient_Details.csv', newline='') as file:
     reader = csv.DictReader(file)
     for row in reader:
         patients.append(row)
@@ -50,7 +50,7 @@ else:
     print("Patient not found")
 
 # Write back updated data
-with open('Patient_details.csv', 'w', newline='') as file:
+with open('Patient_Details.csv', 'w', newline='') as file:
     fieldnames = patients[0].keys()
     writer = csv.DictWriter(file, fieldnames=fieldnames)
     writer.writeheader()

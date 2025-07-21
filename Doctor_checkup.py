@@ -2,10 +2,10 @@ import pandas as pd
 from datetime import datetime
 import os
 from tabulate import tabulate
-import sys
+# import sys
 
-# Fix Unicode printing
-sys.stdout.reconfigure(encoding='utf-8')
+# # Fix Unicode printing
+# sys.stdout.reconfigure(encoding='utf-8')
 
 def update_patient_checkup():
     csv_path = r"C:\\Users\Sharath A L\Desktop\\Hospital360\\Patient_Details.csv"
@@ -25,7 +25,7 @@ def update_patient_checkup():
     print("\n Patient List:")
     print(tabulate(df[['Patient_ID', 'Name', 'Symptoms']], headers='keys', tablefmt='grid'))
 
-    patient_id = input("\n🔍 Enter Patient ID to update (e.g., P001): ").strip().upper()
+    patient_id = input("\n Enter Patient ID to update (e.g., P001): ").strip().upper()
 
     if 'Patient_ID' not in df.columns:
         print("Column 'Patient_ID' not found in the CSV!")

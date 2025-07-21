@@ -66,7 +66,7 @@ def nurse_view_patient_record():
             print(file.read())
         print("-" * 40)
     else:
-        print(f"⚠ No doctor notes found for Patient ID: {patient_id} ({txt_filename} not found)")
+        print(f"No doctor notes found for Patient ID: {patient_id} ({txt_filename} not found)")
 
 # Main
 if __name__ == "__main__":
