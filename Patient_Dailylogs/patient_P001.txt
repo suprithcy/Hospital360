@@ -1,0 +1,12 @@
+
+--- Daily Update on 2025-07-21 15:52:58 ---
+Patient_ID: P001
+Name: manoj
+Gender: Male
+Address: bangalore
+Symptoms: fever
+Doctor_type: General Physician
+Doctor_name: Dr. Ayesha Mehta
+Test_results: Blood Pressure:87, WBC Count:34, Hemoglobin:34
+Checkup Notes: drink more water
+----------------------------------------

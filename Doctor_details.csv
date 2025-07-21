@@ -1,6 +1,6 @@
 Doctor_ID,Name,Password,Specialization,Patients_Assigned
-D01,Dr. Ayesha Mehta,D01_Dr. AyeshaMehta,General Physician,2
-D02,Dr. Rohan Kapoor,D02_Dr. RohanKapoor,General Physician,2
+D01,Dr. Ayesha Mehta,D01_Dr. AyeshaMehta,General Physician,4
+D02,Dr. Rohan Kapoor,D02_Dr. RohanKapoor,General Physician,3
 D03,Dr. Sneha Reddy,D03_Dr. SnehaReddy,Cardiology,1
 D04,Dr. Vikram Desai,D04_Dr. VikramDesai,Cardiology,0
 D05,Dr. Anjali Verma,D05_Dr. AnjaliVerma,Orthopedics,0

@@ -1,5 +1,5 @@
 
---- Daily Update on 2025-07-21 09:34:57 ---
+--- Daily Update on 2025-07-21 15:53:36 ---
 Patient_ID: P002
 Name: Manja
 Gender: Male
@@ -8,5 +8,5 @@ Symptoms: fever
 Doctor_type: General Physician
 Doctor_name: Dr. Rohan Kapoor
 Test_results: Blood Pressure:65, WBC Count:09, Hemoglobin:89
-Checkup Notes: drink water
+Checkup Notes: take paracitomal
 ----------------------------------------

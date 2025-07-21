@@ -116,7 +116,4 @@ def doctor_assignment(p_id):
 
 # Test the function
 patient_id = input("Enter the Patient ID : ")
-
-
-
 doctor_assignment(patient_id)

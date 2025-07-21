@@ -2,14 +2,13 @@ import pandas as pd
 from datetime import datetime
 import os
 from tabulate import tabulate
-# import sys
-
-# # Fix Unicode printing
-# sys.stdout.reconfigure(encoding='utf-8')
 
 def update_patient_checkup():
     csv_path = r"C:\\Users\Sharath A L\Desktop\\Hospital360\\Patient_Details.csv"
-    records_folder = r"C:\\Users\Sharath A L\\Desktop\\Hospital360"
+    records_folder = r"C:\\Users\Sharath A L\\Desktop\\Hospital360\\Patient_Dailylogs"
+
+    # Create the folder if it doesn't exist
+    os.makedirs(records_folder, exist_ok=True)
 
     if not os.path.exists(csv_path):
         print("Patient details CSV file not found:", csv_path)
@@ -47,6 +46,7 @@ def update_patient_checkup():
     update_notes = input("\n Enter daily checkup notes / observations: ").strip()
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
+    # Save the notes in Patient_Dailylogs folder
     txt_filename = f"patient_{patient_id}.txt"
     txt_path = os.path.join(records_folder, txt_filename)
 

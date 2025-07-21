@@ -27,7 +27,8 @@ def display_menu():
     print("2. Search Patient")
     print("3. Delete Patient")
     print("4. Assign Doctor to Patient")
-    print("5. Exit")
+    print("5. Billing the Expendature and Discharge")
+    print("6. Exit")
 
 # ------------------ ADD PATIENT ------------------
 def add_new_patient():
@@ -165,15 +166,24 @@ def main():
                     print(" Patient file not found.\n")
             else:
                 print(" Invalid choice. Please try again.\n")
+                
         elif choice == '3':
             delete_patient_by_id()
+
         elif choice == '4':
             # Run Doctor_Assignment.py
             try:
                 os.system('python Doctor_Assignment.py')
             except Exception as e:
                 print(f" Failed to run Doctor_Assignment.py: {e}")
-        elif choice == '5':
+
+        elif choice=='5':
+            try:
+                os.system('python Billing_System.py')
+            except Exception as e:
+                print(f" Failed to run Billing_System.py: {e}")
+
+        elif choice == '6':
             print("👋 Exiting... Goodbye!")
             break
         else:

@@ -1,0 +1,10 @@
+--- Patient Hospital Bill ---
+Patient ID         : P002
+Patient Name       : Manja
+Consulting Doctor  : Dr. Rohan Kapoor
+Doctor Fee         : ₹10000.0
+Days Stayed        : 65
+Room Charge/Day    : ₹1000.0
+Total Room Charges : ₹65000.0
+------------------------------
+Total Bill Amount  : ₹75000.0
