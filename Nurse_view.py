@@ -4,7 +4,7 @@ import os
 # Paths
 NURSE_CSV_PATH = r"C:\Users\Sharath A L\Desktop\Hospital360\Nurse_details.csv"
 PATIENT_CSV_PATH = r"C:\Users\Sharath A L\Desktop\Hospital360\Patient_Details.csv"
-RECORDS_FOLDER = r"C:\Users\Sharath A L\Desktop\Hospital360"  # Where patient text files are stored
+RECORDS_FOLDER = r"C:\Users\Sharath A L\Desktop\Hospital360\Patient_Dailylogs"  # Where patient text files are stored
 
 def authenticate_nurse():
     try:

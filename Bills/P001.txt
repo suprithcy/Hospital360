@@ -2,9 +2,9 @@
 Patient ID         : P001
 Patient Name       : kakroj
 Consulting Doctor  : Dr. Ayesha Mehta
-Doctor Fee         : ₹1200.0
+Doctor Fee         : ₹120.0
 Days Stayed        : 12
 Room Charge/Day    : ₹1000.0
 Total Room Charges : ₹12000.0
 ------------------------------
-Total Bill Amount  : ₹13200.0
+Total Bill Amount  : ₹12120.0

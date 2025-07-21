@@ -1,2 +1,3 @@
 Patient_ID,Name,Gender,Address,Symptoms,Doctor_type,Doctor_name,Test_results
 P001,kakroj,Male,mumbai,fever,General Physician,Dr. Ayesha Mehta,None
+P002,manoj,Male,tumkur,fever,General Physician,Dr. Ayesha Mehta,"Blood Pressure:34, WBC Count:76, Hemoglobin:87"
